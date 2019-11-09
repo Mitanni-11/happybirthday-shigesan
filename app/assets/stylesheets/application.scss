@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// all
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+h1 {
+  margin: 0;
+  font-size: 50px;
+}
+h3 {
+  margin: 0px;
+  line-height: 40px;
+}
+
+
+
+// layout
+
+body {
+  min-width: 100%;
+  margin: 0px;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #E0C73C;
+}
+
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 20px 20px 40px;
+  background-color: #E0C73C;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 20px 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: inline-block;
+  padding: 0;
+}
+.subtitle {
+  display: inline-block;
+  margin: none;
+  width: 100%;
+}
+.contents {
+  float: left;
+  padding: 0 20px;
+}
+.slash {
+  float: left;
+  display: inline-block;
+  font-size: 30px;
+}
+
+
+// button
+
+.button {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  padding: 0 20px;
+  margin: 10px 0;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+}
+
+.button h3 {
+  line-height: 50px;
+}
+
+.button:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}

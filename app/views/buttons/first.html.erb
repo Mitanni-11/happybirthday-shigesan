@@ -1,0 +1,22 @@
+<% assign_meta_tags title: '',
+                    image: {_: image_url('shige.jpg'), width: 1200, height: 630}%>
+
+<div class="main">
+  <div class="title">
+    <h1>しげさん誕生日おめでとう！</h1>
+  </div>
+  <ul class=“subtitle”>
+    <li class="slash">＼</li>
+    <li class="contents">
+      ボタンを押すと<br>Twitterに投稿できるよ !
+    </li>
+    <li class="slash">／</li>
+  </ul>
+  <div class="button-area">
+    <%= link_to "https://twitter.com/share?url=https://www.jiro-button.com/buttons/first/&text=行きたい!%20%23二郎ボタン%20 ", target: :_blank do %>
+      <div class="button">
+        <h3>誕生日おめでとう！</h3>
+      </div>
+    <% end %>
+  </div>
+</div>
