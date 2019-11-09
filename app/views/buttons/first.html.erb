@@ -1,7 +1,7 @@
 <% assign_meta_tags title: '',
                     image: {_: image_url('shige.jpg'), width: 1200, height: 630}%>
-
 <div class="main">
+  <%= image_tag "shige.jpg" %>
   <div class="title">
     <h1>しげさん誕生日おめでとう！</h1>
   </div>
@@ -13,8 +13,8 @@
     <li class="slash">／</li>
   </ul>
   <div class="button-area">
-
-    <%= link_to "https://twitter.com/share?url=https://happybirthday-shige.herokuapp.com/buttons/first/&text=誕生日おめでとう！！%20%23シゲヤマ誕生日%20 ", target: :_blank do %>      <div class="button">
+    <%= link_to "https://twitter.com/share?url=https://happybirthday-shige.herokuapp.com/buttons/first/&text=誕生日おめでとう！！%20%23シゲヤマ誕生日%20 ", target: :_blank do %>
+      <div class="button">
         <h3>Happy Birthday!!</h3>
       </div>
     <% end %>
