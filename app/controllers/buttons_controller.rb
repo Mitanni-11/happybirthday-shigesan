@@ -24,19 +24,29 @@ class ButtonsController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          message = {
-              type: 'text',
-              text: "メッセージを受け取ったよ！ ありがとう！！"
-          }
+          case event.message['text']
+          when "予約"
+            message = {
+                type: 'text',
+                text: "予約ですね。 こちらからどうぞ　https://yago.host/"
+            }
+          when "決済"
+            message = {
+                type: 'text',
+                text: "決済ですね。 YAGOはStripeを使っています。"
+            }
+          when "君じゃ話にならん！"
+            message = {
+                type: 'text',
+                text: "社長を読んで参ります。"
+            }
+          end
           client.reply_message(event['replyToken'], message)
-        when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
-          response = client.get_message_content(event.message['id'])
-          tf = Tempfile.open("content")
-          tf.write(response.body)
         end
       end
 
     end
 
+    head :ok
   end
 end
