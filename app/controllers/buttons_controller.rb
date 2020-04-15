@@ -26,7 +26,7 @@ class ButtonsController < ApplicationController
         when Line::Bot::Event::MessageType::Text
           message = {
               type: 'text',
-              text: event.message['メッセージを受け取ったよ！ ありがとう！！']
+              text: "メッセージを受け取ったよ！ ありがとう！！"
           }
           @client.reply_message(event['replyToken'], message)
         when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
