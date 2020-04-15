@@ -1,5 +1,7 @@
+require 'line/bot'
 class ButtonsController < ApplicationController
-  require 'line/bot'
+  protect_from_forgery :except => [:line_message]
+
 
   def line_message
     @client ||= Line::Bot::Client.new { |config|
