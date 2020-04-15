@@ -40,6 +40,11 @@ class ButtonsController < ApplicationController
                 type: 'text',
                 text: "社長を読んで参ります。"
             }
+          else
+            message = {
+                type: 'text',
+                text: "メッセージありがとうございます。「予約」と打つと予約することができます。"
+            }
           end
           client.reply_message(event['replyToken'], message)
         end
